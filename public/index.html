@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>P2P File Transfer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Pacifico"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sofia&effect=3d|fire|fire-animation|emboss|shadow-multiple"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Audiowide"
+    />
+  </head>
+  <body>
+    <h1>P2P File Transfer</h1>
+    <div id="socketIdContainer">Session ID: <span id="socketId"></span></div>
+    <div class="container">
+      <div class="left-container">
+        <p class="label">Room ID: <span id="roomId">hejkhjhajkhfhhf</span></p>
+        <div>
+          <label for="roomIdInput" class="label">Enter room ID: </label>
+          <input type="text" id="roomIdInput" />
+          <button id="joinRoom">Join Room</button>
+        </div>
+        <div id="dropArea" class="drop-area">
+          <p>Drag and drop files here or</p>
+          <button id="browseFile">Browse for files</button>
+        </div>
+        <input type="file" id="fileInput" style="display: none" />
+        <div id="fileInfo">
+          <p id="selectedFileName"></p>
+          <button id="submitFile">Send</button>
+        </div>
+        <div id="fileListDiv">
+          <h2 class="messageHeader">Shared Files:</h2>
+          <ul id="fileList"></ul>
+        </div>
+      </div>
+      <div class="right-container">
+        <div id="latestConnection">
+          <h2 class="messageHeader">Connection Message:</h2>
+          <div id="messages"></div>
+        </div>
+        <div id="userdiv">
+          <h2 class="userHeader">Users in the room:</h2>
+          <ul id="userList">
+            <li>No users in the room yet.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

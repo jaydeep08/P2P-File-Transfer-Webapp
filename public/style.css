@@ -1,0 +1,223 @@
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: sans-serif;
+  background-image: url('3185113.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-container {
+  background-color: #44444476;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 45%;
+  padding: 20px;
+}
+
+.label {
+  font-family: "Audiowide", sans-serif;
+  font-size: 18px;
+  text-shadow: 4px 4px 4px rgb(132, 139, 98);
+  color: #ffad61;
+}
+
+.right-container {
+  background-color: #44444476;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 45%;
+  padding: 20px;
+}
+
+#userdiv {
+  margin-top: 40px;
+}
+
+#userList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 30px;
+  margin-top: 10px;
+  font-family: 'Lobster', cursive;
+}
+
+#userList li {
+  padding: 5px;
+  border-bottom: 1px solid #555;
+}
+
+#userList li:last-child {
+  border: none;
+}
+
+#messages {
+  font-family: 'Lobster', cursive;
+  margin-left: 30px;
+}
+
+button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitFile {
+  background-color: #28a745;
+}
+
+#fileInput {
+  display: none;
+}
+
+.drop-area {
+  margin-top: 10px;
+  border: 2px dashed #007BFF;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Lobster', cursive;
+}
+
+.drop-area:hover {
+  border-color: #28a745;
+}
+
+#roomId {
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  color: #ffdfc1;
+}
+
+#joinRoom {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#joinRoom:hover {
+  background-color: #0056b3;
+}
+
+#submitFile {
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#submitFile:hover {
+  background-color: #1d8235;
+}
+
+
+
+#fileListDiv {
+  background-color: #444444b5;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+}
+
+#fileList li {
+  padding: 10px;
+  border: 1px solid #1f1f1f;
+  background-color: #767676e4;
+  color: #2f2f2f;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#fileList li:hover {
+  background-color: #9b9b9be4;
+}
+
+#fileList li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Lobster', cursive;
+}
+
+#fileList li a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-family: 'Lobster', cursive;
+  color: #cecece;
+  margin-top: 20px;
+}
+
+#socketIdContainer {
+  text-align: right;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-family: "Audiowide", sans-serif;
+  font-size: 15px;
+  text-shadow: 4px 4px 4px rgb(132, 139, 98);
+  color: #ffdfc1;
+}
+
+.userHeader {
+  font-family: "Audiowide", sans-serif;
+  font-size: 20px;
+  text-shadow: 4px 4px 4px rgb(132, 139, 98);
+  color: #ffad61;
+}
+
+.messageHeader {
+  font-family: "Audiowide", sans-serif;
+  font-size: 20px;
+  text-shadow: 4px 4px 4px rgb(132, 139, 98);
+  color: #ffad61;
+}
+
+#roomIdInput {
+  height: 20px;
+}
+
+#selectedFileName {
+  font-family: 'Lobster', cursive;
+  color: #fcfcfca3;
+}
