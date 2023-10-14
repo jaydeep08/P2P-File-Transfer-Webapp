@@ -15,8 +15,9 @@ Project setup guide
 		•	In the "System Variables" section, find and select the "Path" variable, then click "Edit". Add the directory where Node.js is installed (e.g., C:\Program Files\nodejs) to the list.
 4.	Open project folder in Vs-code:
 5.	Open vs code terminal (Command Prompt terminal):
-6.	Type command in terminal-
+6.	Type command in terminal:
+
 		npm init
 		npm install express express-fileupload multer socket.io
 		node server.js
-7.	paste the url http://localhost:3000 in web browser .
+8.	paste the url http://localhost:3000 in web browser .
