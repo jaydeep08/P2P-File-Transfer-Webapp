@@ -24,7 +24,7 @@ app.post('/upload/:roomId', (req, res) => {
   const uploadedFile = req.files.file;
   const fileName = uploadedFile.name;
   const uploadDirectory = path.join(__dirname, 'uploads', roomId);
-  const filesInRooms = {};
+
   // Create the directory if it doesn't exist
   fs.mkdirSync(uploadDirectory, { recursive: true });
 
@@ -86,4 +86,20 @@ io.on('connection', (socket) => {
 const port = 3000;
 server.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
+});
+
+
+
+
+
+
+app.get('/download/:roomId/:filename', (req, res) => {
+  const roomId = req.params.roomId;
+  const filename = req.params.filename;
+  const filePath = path.join(__dirname, 'uploads', roomId, filename);
+  if (fs.existsSync(filePath)) {
+    res.download(filePath); // Trigger a file download
+  } else {
+    res.status(404).send('File not found');
+  }
 });

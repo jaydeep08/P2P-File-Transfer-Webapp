@@ -26,10 +26,15 @@ const selectedFileName = document.getElementById("selectedFileName");
 socket.on("fileList", (files) => {
   // Update the file list with the files in the room
   fileList.innerHTML = "";
+  let roomId = document.getElementById("roomIdInput").value;
+    if (roomId.trim() === "") {
+      const roomIdSpan = document.getElementById("roomId");
+      roomId = roomIdSpan.textContent;
+    }
   files.forEach((filename) => {
     const listItem = document.createElement("li");
     const fileLink = document.createElement("a");
-    fileLink.href = `/download/${filename}`;
+    fileLink.href = `/download/${roomId}/${filename}`;
     fileLink.download = filename;
     fileLink.textContent = filename;
     listItem.appendChild(fileLink);
@@ -114,7 +119,12 @@ socket.on("fileUploaded", (data) => {
   const fileLink = document.createElement("a"); // Create a download link
 
   // Set the download link's attributes
-  fileLink.href = `/download/${data.filename}`;
+  let roomId = document.getElementById("roomIdInput").value;
+    if (roomId.trim() === "") {
+      const roomIdSpan = document.getElementById("roomId");
+      roomId = roomIdSpan.textContent;
+    }
+  fileLink.href = `/download/${roomId}/${data.filename}`;
   fileLink.download = data.filename; // Set the filename for download
   fileLink.textContent = data.filename;
 
